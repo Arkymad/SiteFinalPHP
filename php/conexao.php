@@ -1,10 +1,10 @@
 <?php
 
-    define("HOSTNAME", "ec2-34-194-158-176.compute-1.amazonaws.com");
-    define("USERNAME", "ulvnmikmnqnrcx");
-    define("PASSWORD", "d97b6f806b4ac787a52317d6d0967cff1d6cb058e3f3e6dff0e96256a3658725");
-    define("SCHEMA", "dfrvuif58fqk1u");
-    define("PORT", 5432);
+    define("HOSTNAME", "ec2-44-199-143-43.compute-1.amazonaws.com");
+    define("USERNAME", "stoscfnquepbpn");
+    define("PASSWORD", "ad76f0773c0535207b1286d21c42b17650aaa080b60572ed588fab600a30e1cd");
+    define("SCHEMA", "ddl8ca92v928po");
+    define("PORT",5432 );
 
     function getConnection()
     {
