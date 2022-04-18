@@ -8,19 +8,7 @@
                 <li class="nav-item"><a class="nav-link" href="#!">Sobre nós</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">Contato</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">Serviços</a></li>
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownPortfolio" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Gerenciamento</a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownPortfolio">
-                <li><a class="dropdown-item"  >Cadastrar</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" a href="php/servicos.form.php" >Serviços</a></li>
-                <li><a class="dropdown-item" a href="php/planos.form.php" >Planos</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" >Editar</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" a href="php/servicos.list.php" >Serviços</a></li>
-                <li><a class="dropdown-item" a href="php/planos.list.php" >Planos</a></li>
-                <li><hr class="dropdown-divider"></li>
+                <li class="nav-item"><a class="nav-link" href="login.php">Acesso ao Sistema</a></li>
                 </ul>
                 </li>
             </ul>

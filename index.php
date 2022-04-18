@@ -1,6 +1,8 @@
 <?php 
-include_once ('./php/business.crud.php');
- ?>
+require_once('config/config.php');
+$PlanoService = new PlanoService(); 
+$ServicoService = new ServicoService(); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -40,12 +42,12 @@ include_once ('./php/business.crud.php');
         <!-- Features section-->
         <section class="py-5 border-bottom" id="features">
             <div class="container px-5 my-5">
-                <div class="row gx-5">    
-                    <?php foreach (listaServicos() as $servico) : ?>
+                <div class="row gx-5">                        
+                    <?php foreach($ServicoService->listar(3) as $servico): ?>  
                         <div class="col-lg-4 mb-5 mb-lg-0">
-                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi <?= $servico-> imagem ?>"></i></div>
-                            <h2 class="h4 fw-bolder"><?= $servico-> titulo ?></h2>
-                            <p><?= $servico-> descricao ?>.</p>
+                            <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi <?= ($servico->getImagem()) ?>"></i></div>
+                            <h2 class="h4 fw-bolder"><?= ($servico-> getTitulo()) ?></h2>
+                            <p><?= ($servico-> getDescricao()) ?>.</p>
                             <a class="text-decoration-none" href="#!">
                                 Call to action
                                 <i class="bi bi-arrow-right"></i>
@@ -64,50 +66,50 @@ include_once ('./php/business.crud.php');
                 </div>
                 <div class="row gx-5 justify-content-center">                   
                     <!-- Pricing cards-->    
-                    <?php foreach (listaPlanos() as $plano) : ?>
+                    <?php foreach($PlanoService->listar(10) as $plano): ?>
                         <div class="col-lg-6 col-xl-4">
                             <div class="card">
                                 <div class="card-body p-5">
-                                    <div class="small text-uppercase fw-bold text-muted"> <?= $plano-> tipo ?></div>
+                                    <div class="small text-uppercase fw-bold text-muted"> <?= ($plano-> getTipo()) ?></div>
                                     <div class="mb-3">
-                                        <span class="display-4 fw-bold">$ <?= $plano-> preco ?></span>
+                                        <span class="display-4 fw-bold">$ <?= ($plano-> getPreco()) ?></span>
                                         <span class="text-muted">/ mo.</span>
                                     </div>
                                     <ul class="list-unstyled mb-4">
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <strong><?= $plano-> info1 ?></strong>
+                                            <strong><?= ($plano-> getInfo1()) ?></strong>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info2 ?>
+                                            <?= ($plano-> getInfo2()) ?>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info3 ?>
+                                            <?= ($plano-> getInfo3()) ?>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info4 ?>
+                                            <?= ($plano-> getInfo4()) ?>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info5 ?>
+                                            <?= ($plano-> getInfo5()) ?>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info6 ?>
+                                            <?= ($plano-> getInfo6()) ?>
                                         </li>
                                         <li class="mb-2">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info7 ?>
+                                            <?= ($plano-> getInfo7()) ?>
                                         </li>
                                         <li class="text-muted">
                                             <i class="bi bi-check text-primary"></i>
-                                            <?= $plano-> info8 ?>
+                                            <?= ($plano-> getInfo8()) ?>
                                         </li>
                                     </ul>
-                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Choose plan</a></div>
+                                    <div class="d-grid"><a class="btn btn-outline-primary" href="#!">Escolha o plano</a></div>
                                 </div>
                             </div>
                         </div>
